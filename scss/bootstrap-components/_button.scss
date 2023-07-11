@@ -1,0 +1,35 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.btn {
+    &.btn-primary {
+        --bs-btn-bg: var(--bs-primary);
+        --bs-btn-hover-bg: var(--bs-primary-shade);
+        --bs-btn-border-color: var(--bs-primary);
+        --bs-btn-hover-border-color: var(--bs-primary-shade);
+    }
+
+    &.btn-secondary {
+        --bs-btn-bg: var(--bs-secondary);
+        --bs-btn-hover-bg: var(--bs-secondary-shade);
+        --bs-btn-border-color: var(--bs-secondary);
+        --bs-btn-hover-border-color: var(--bs-secondary-shade);
+    }
+
+    &.btn-tertiary-1 {
+        --bs-btn-bg: var(--bs-tertiary-1);
+        --bs-btn-hover-bg: var(--bs-tertiary-1-shade);
+        --bs-btn-border-color: var(--bs-tertiary-1);
+        --bs-btn-hover-border-color: var(--bs-tertiary-1-shade);
+    }
+
+    &.btn-tertiary-2 {
+        --bs-btn-color: #ffffff;
+        --bs-btn-hover-color: #ffffff;
+        --bs-btn-bg: var(--bs-tertiary-2);
+        --bs-btn-hover-bg: var(--bs-tertiary-2-shade);
+        --bs-btn-border-color: var(--bs-tertiary-2);
+        --bs-btn-hover-border-color: var(--bs-tertiary-2-shade);
+    }
+}

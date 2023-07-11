@@ -1,0 +1,41 @@
+:root {
+    --bs-body-color: #333333;
+
+    --bs-body-font-family: Calibri, Candara, Segoe, "Segoe UI", Helvetica, Arial, sans-serif;
+
+    --bs-primary: #F26647;
+    --bs-primary-shade: #EF421B;
+    --bs-primary-tint: #F47B60;
+
+    --bs-secondary: #542E91;
+    --bs-secondary-shade: #47277B;
+    --bs-secondary-tint: #6738B2;
+
+    --bs-tertiary-1: #7FDDDA;
+    --bs-tertiary-1-shade: #57D2CE;
+    --bs-tertiary-1-tint: #90E2DF;
+
+    --bs-tertiary-2: #333333;
+    --bs-tertiary-2-shade: #2C2C2C;
+    --bs-tertiary-2-tint: #505050;
+
+    // Custom variables
+
+    --borderRadius: 10px;
+    --cardBoxShadow: 0 0 12px rgba(0,0,0,0.2);
+
+    --header-color: var(--bs-secondary);
+    --eyebrow-color: var(--bs-tertiary-2);
+
+    --link-color: var(--bs-body-color);
+    --link-hover-color: var(--bs-secondary);
+
+    --notification-bar-bg: var(--bs-secondary);
+
+    --rte-fifty-fifty-bg-color: #E6E8E8;
+
+    --hero-carousel-bg-light: #F3F9FA;
+    --hero-carousel-bg-dark: #0C1F22;
+
+    --newsletter-bg-color: var(--bs-secondary);
+}

@@ -1,0 +1,12 @@
+body {
+    .gform_wrapper.gravity-theme {
+        // Submit button
+        .gform_footer button,
+        .gform_footer input,
+        .gform_page_footer button,
+        .gform_page_footer input {
+            @extend .btn;
+            @extend .btn-primary;
+        }
+    }
+}

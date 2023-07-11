@@ -1,0 +1,386 @@
+/*
+Theme Name:   TechConnect Network Child Theme
+Author:       Heretic Agency
+Template:     Heretic
+Version:      1.0.0
+*/
+:root {
+  --bs-body-color: #333333;
+  --bs-body-font-family: Calibri, Candara, Segoe, "Segoe UI", Helvetica, Arial, sans-serif;
+  --bs-primary: #F26647;
+  --bs-primary-shade: #EF421B;
+  --bs-primary-tint: #F47B60;
+  --bs-secondary: #542E91;
+  --bs-secondary-shade: #47277B;
+  --bs-secondary-tint: #6738B2;
+  --bs-tertiary-1: #7FDDDA;
+  --bs-tertiary-1-shade: #57D2CE;
+  --bs-tertiary-1-tint: #90E2DF;
+  --bs-tertiary-2: #333333;
+  --bs-tertiary-2-shade: #2C2C2C;
+  --bs-tertiary-2-tint: #505050;
+  --borderRadius: 10px;
+  --cardBoxShadow: 0 0 12px rgba(0,0,0,0.2);
+  --header-color: var(--bs-secondary);
+  --eyebrow-color: var(--bs-tertiary-2);
+  --link-color: var(--bs-body-color);
+  --link-hover-color: var(--bs-secondary);
+  --notification-bar-bg: var(--bs-secondary);
+  --rte-fifty-fifty-bg-color: #E6E8E8;
+  --hero-carousel-bg-light: #F3F9FA;
+  --hero-carousel-bg-dark: #0C1F22;
+  --newsletter-bg-color: var(--bs-secondary);
+}
+
+.btn.btn-primary, .services-facets button.facetwp-reset, body .gform_wrapper.gravity-theme .gform_footer button,
+body .gform_wrapper.gravity-theme .gform_footer input,
+body .gform_wrapper.gravity-theme .gform_page_footer button,
+body .gform_wrapper.gravity-theme .gform_page_footer input {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-primary-shade);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary-shade);
+}
+.btn.btn-secondary, .services-facets button.btn-secondary.facetwp-reset, body .gform_wrapper.gravity-theme .gform_footer button.btn-secondary,
+body .gform_wrapper.gravity-theme .gform_footer input.btn-secondary,
+body .gform_wrapper.gravity-theme .gform_page_footer button.btn-secondary,
+body .gform_wrapper.gravity-theme .gform_page_footer input.btn-secondary {
+  --bs-btn-bg: var(--bs-secondary);
+  --bs-btn-hover-bg: var(--bs-secondary-shade);
+  --bs-btn-border-color: var(--bs-secondary);
+  --bs-btn-hover-border-color: var(--bs-secondary-shade);
+}
+.btn.btn-tertiary-1, .services-facets button.btn-tertiary-1.facetwp-reset, body .gform_wrapper.gravity-theme .gform_footer button.btn-tertiary-1,
+body .gform_wrapper.gravity-theme .gform_footer input.btn-tertiary-1,
+body .gform_wrapper.gravity-theme .gform_page_footer button.btn-tertiary-1,
+body .gform_wrapper.gravity-theme .gform_page_footer input.btn-tertiary-1 {
+  --bs-btn-bg: var(--bs-tertiary-1);
+  --bs-btn-hover-bg: var(--bs-tertiary-1-shade);
+  --bs-btn-border-color: var(--bs-tertiary-1);
+  --bs-btn-hover-border-color: var(--bs-tertiary-1-shade);
+}
+.btn.btn-tertiary-2, .services-facets button.btn-tertiary-2.facetwp-reset, body .gform_wrapper.gravity-theme .gform_footer button.btn-tertiary-2,
+body .gform_wrapper.gravity-theme .gform_footer input.btn-tertiary-2,
+body .gform_wrapper.gravity-theme .gform_page_footer button.btn-tertiary-2,
+body .gform_wrapper.gravity-theme .gform_page_footer input.btn-tertiary-2 {
+  --bs-btn-color: #ffffff;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-bg: var(--bs-tertiary-2);
+  --bs-btn-hover-bg: var(--bs-tertiary-2-shade);
+  --bs-btn-border-color: var(--bs-tertiary-2);
+  --bs-btn-hover-border-color: var(--bs-tertiary-2-shade);
+}
+
+.card {
+  --bs-card-border-radius: var(--borderRadius);
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("fonts/calibri_regular-webfont.woff2") format("woff2"), url("fonts/calibri_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("fonts/calibri_light-webfont.woff2") format("woff2"), url("fonts/calibri_light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("fonts/calibri_light_italic-webfont.woff2") format("woff2"), url("fonts/calibri_light_italic-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("fonts/calibri_italic-webfont.woff2") format("woff2"), url("fonts/calibri_italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("fonts/calibri_bold_italic-webfont.woff2") format("woff2"), url("fonts/calibri_bold_italic-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("fonts/calibri_bold-webfont.woff2") format("woff2"), url("fonts/calibri_bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+.eyebrow {
+  font-size: 1rem;
+  display: inline-block;
+}
+.eyebrow:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: 3px;
+  background: var(--bs-tertiary-1);
+}
+
+a {
+  color: var(--bs-body-color);
+  text-decoration: underline;
+}
+a:hover {
+  color: var(--link-hover-color);
+}
+
+.notification-bar {
+  font-size: 20px;
+  font-weight: 700;
+}
+.notification-bar a {
+  text-decoration: none;
+}
+.notification-bar a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.primary-header {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+:not(.nav-drawer) > .primary-nav.menu-top > li:hover {
+  color: var(--bs-secondary);
+}
+
+.primary-nav-container .sub-menu li a {
+  padding: 7px 40px 7px 20px;
+}
+.primary-nav-container .sub-menu li a .sub-menu-icon {
+  display: none;
+}
+.primary-nav-container .sub-menu li a:hover:before {
+  content: "";
+  background: var(--bs-secondary);
+}
+.primary-nav-container .sub-menu li a:hover .bi-arrow-right {
+  fill: var(--bs-secondary);
+}
+
+.nav-drawer .primary-nav > li a:hover {
+  color: var(--bs-secondary);
+}
+.nav-drawer .primary-nav > li span:hover {
+  color: var(--bs-secondary);
+}
+.nav-drawer .primary-nav > li.has-children.active .sub-menu a {
+  padding: 0;
+}
+.nav-drawer .primary-nav > li.has-children.active .sub-menu .sub-menu-icon {
+  display: none;
+}
+
+.services-intro {
+  margin: calc(1.375rem + 1.5vw) 0 calc(1.6875rem + 5.25vw) 0;
+}
+@media (min-width: 1200px) {
+  .services-intro {
+    margin: 2.5rem 0 5.625rem 0;
+  }
+}
+
+.services-facets .facet-label {
+  margin-bottom: 1em;
+}
+.services-facets .facetwp-counter {
+  display: none;
+}
+.facetwp-template .layout-grid.services {
+  margin: 0;
+}
+
+.service-container .content-column {
+  order: 2;
+}
+@media (min-width: 992px) {
+  .service-container .content-column {
+    order: 1;
+    padding-right: 40px;
+  }
+}
+.service-container .content-column h1 {
+  display: none;
+}
+@media (min-width: 992px) {
+  .service-container .content-column h1 {
+    display: block;
+  }
+}
+.service-container .sidebar-column {
+  margin-bottom: 40px;
+}
+@media (min-width: 992px) {
+  .service-container .sidebar-column {
+    order: 2;
+    margin-bottom: 0;
+  }
+}
+.service-container .service-content div[class*=layout] {
+  margin: calc(1.5rem + 3vw) 0;
+}
+@media (min-width: 1200px) {
+  .service-container .service-content div[class*=layout] {
+    margin: 3.75rem 0;
+  }
+}
+.service-container .service-content div[class*=layout]:not(:last-child) {
+  padding-bottom: calc(1.5rem + 3vw);
+  border-bottom: 1px solid var(--bs-gray-300);
+}
+@media (min-width: 1200px) {
+  .service-container .service-content div[class*=layout]:not(:last-child) {
+    padding-bottom: 3.75rem;
+  }
+}
+
+.service-nav {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  margin-bottom: 40px;
+  padding: 20px 0 0 0;
+  background: var(--bs-white);
+  border-bottom: 1px solid var(--bs-gray-300);
+  overflow-x: scroll;
+}
+.service-nav ul {
+  white-space: nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: var(--bs-gray-300);
+}
+.service-nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+.service-nav ul li a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 10px;
+}
+.service-nav ul li a:hover {
+  color: #0d6efd;
+}
+.service-nav ul li a.active:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #6c757d;
+}
+
+.service-sidebar {
+  position: sticky;
+  top: 20px;
+  background: var(--bs-secondary);
+  padding: 30px;
+  border-radius: var(--borderRadius);
+}
+.service-sidebar .row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.service-sidebar div[class*=col] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.service-sidebar-box {
+  background: var(--bs-white);
+  padding: 25px 20px 18px 20px; /* Bottom has -7px to account for tag items margin-bottom */
+  margin-bottom: 10px;
+  height: calc(100% - 10px);
+  border-radius: var(--borderRadius);
+}
+.service-sidebar-box .service-sidebar-box-header {
+  display: block;
+  font-size: 0.625rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.service-sidebar-box .service-sidebar-box-header.service-name {
+  color: var(--bs-tertiary-2);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.service-sidebar-box h2 {
+  color: var(--bs-secondary);
+  margin-bottom: 0;
+}
+
+.service-category-pills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.service-category-pills:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.service-category-pills li, .service-category-pills span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  float: left;
+  padding: 7px 12px;
+  margin: 0 7px 7px 0;
+  background: var(--bs-gray-300);
+  border-radius: 20px;
+}
+
+.related-services h2 {
+  margin-bottom: calc(1.5rem + 3vw);
+}
+@media (min-width: 1200px) {
+  .related-services h2 {
+    margin-bottom: 3.75rem;
+  }
+}
+
+.primary-footer {
+  background-color: var(--bs-secondary);
+  color: #fff;
+}
+.primary-footer .footer-top {
+  border-top: none;
+  border-bottom-color: #ffffff;
+}
+.primary-footer a:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.footer-bottom .social-links a {
+  background: #fff;
+}
+.footer-bottom .social-links a i {
+  color: var(--bs-secondary);
+  font-size: 1.25rem;
+}
+.footer-bottom .social-links a:hover {
+  background: var(--bs-tertiary-1);
+}
+.footer-bottom .social-links a:hover i {
+  color: var(--bs-secondary);
+}
+
+.footer-badges img {
+  max-width: 90% !important;
+}

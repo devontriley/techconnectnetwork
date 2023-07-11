@@ -1,0 +1,22 @@
+.eyebrow {
+    @include font-size(1rem);
+    display: inline-block;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        margin-top: 3px;
+        background: var(--bs-tertiary-1);
+    }
+}
+
+a {
+    color: var(--bs-body-color);
+    text-decoration: underline;
+
+    &:hover {
+        color: var(--link-hover-color);
+    }
+}

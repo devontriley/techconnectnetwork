@@ -1,0 +1,42 @@
+.primary-footer {
+    background-color: var(--bs-secondary);
+    color: #fff;
+
+    .footer-top {
+        border-top: none;
+        border-bottom-color: #ffffff;
+    }
+
+    a {
+        &:hover {
+            color: rgb(0,0,0,0.8);
+        }
+    }
+}
+
+.footer-bottom {
+    .social-links {
+        a {
+            background: $white;
+
+            i {
+                color: var(--bs-secondary);
+                font-size: 1.25rem;
+            }
+
+            &:hover {
+                background: var(--bs-tertiary-1);
+
+                i {
+                    color: var(--bs-secondary);
+                }
+            }
+        }
+    }
+}
+
+.footer-badges {
+    img {
+        max-width: 90% !important;
+    }
+}
