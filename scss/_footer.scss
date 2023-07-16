@@ -7,14 +7,17 @@
         border-bottom-color: #ffffff;
     }
 
-    a {
-        &:hover {
-            color: rgb(0,0,0,0.8);
+    .footer-logo {
+        img {
+            margin-bottom: 30px;
         }
     }
-}
 
-.footer-bottom {
+    .footer-links {
+        margin-bottom: 30px;
+        font-weight: 700;
+    }
+
     .social-links {
         a {
             background: $white;
@@ -33,10 +36,32 @@
             }
         }
     }
-}
 
-.footer-badges {
-    img {
-        max-width: 90% !important;
+    .footer-badges {
+        img {
+            max-width: 90% !important;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            @include font-size(18px);
+            display: inline-block;
+            margin: 0 20px !important;
+        }
+    }
+
+    a {
+        &:hover {
+            color: var(--bs-tertiary-1);
+        }
+    }
+
+    p {
+        @include font-size(16px);
     }
 }

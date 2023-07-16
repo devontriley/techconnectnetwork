@@ -3,6 +3,14 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 .btn {
+    border: 1px solid transparent;
+    transition: all ease 300ms;
+
+    &:hover {
+        box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        border-color: #ffffff;
+    }
+
     &.btn-primary {
         --bs-btn-bg: var(--bs-primary);
         --bs-btn-hover-bg: var(--bs-primary-shade);

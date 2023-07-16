@@ -15,116 +15,74 @@
 <?php
 $logo = get_field( 'logo', 'option' );
 $footerLogo = get_field( 'footer_logo', 'options' );
-$footerMenu1 = wp_get_nav_menu_items( 'footer-menu-1' );
-$footerMenuHeader1 = get_field( 'footer_menu_header', wp_get_nav_menu_object( 'footer-menu-1' ) );
-$footerMenu2 = wp_get_nav_menu_items( 'footer-menu-2' );
-$footerMenuHeader2 = get_field( 'footer_menu_header', wp_get_nav_menu_object( 'footer-menu-2' ) );
-$footerMenu3 = wp_get_nav_menu_items( 'footer-menu-3' );
-$footerMenuHeader3 = get_field( 'footer_menu_header', wp_get_nav_menu_object( 'footer-menu-3' ) );
-$footerMenu4 = wp_get_nav_menu_items( 'footer-menu-4' );
-$footerMenuHeader4 = get_field( 'footer_menu_header', wp_get_nav_menu_object( 'footer-menu-4' ) );
+$footerMenu1 = wp_get_nav_menu_items( 'footer-menu' );
+$footerMenuHeader1 = get_field( 'footer_menu_header', wp_get_nav_menu_object( 'footer-menu' ) );
 $newsletterFormEmbed = get_field( 'newsletter_form_embed', 'option' );
 $socialLinks = get_field( 'social_media_links', 'option' );
 $privacyPolicyURL = get_field( 'privacy_policy_url', 'option' );
 $footerAddressContact = get_field( 'footer_address_&_contact', 'option' );
-$footerBadges = get_field( 'footer_badges', 'options' );
+$donateURL = get_field( 'donate_url', 'option' );
 ?>
 
 <div class="primary-footer">
     <div class="container-lg">
         <div class="row footer-top">
-            <?php if ( $footerMenu1 ) : ?>
-                <div class="col-6 col-md-3 col-xl-2">
-                    <?php if ( $footerMenuHeader1 ) : ?>
-                        <h4><?php echo $footerMenuHeader1 ?></h4>
-                    <?php endif; ?>
-                    <ul>
+            <div class="col-lg-8 offset-lg-2 text-center">
+
+                <a href="<?php echo get_home_url() ?>" class="footer-logo">
+                    <?php echo apply_filters( 'heretic_footer_logo', wp_get_attachment_image( ($footerLogo ? $footerLogo['ID'] : $logo['ID']), 'full' ) ) ?>
+                </a>
+
+                <?php if ( $footerMenu1 ) : ?>
+                    <ul class="footer-links">
                         <?php foreach ( $footerMenu1 as $key => $menuItem ) : ?>
                             <li>
                                 <a href="<?php echo $menuItem->url ?>" target="<?php echo $menuItem->target ?>"><?php echo $menuItem->title ?></a>
                             </li>
                         <?php endforeach; ?>
                     </ul>
-                </div>
-            <?php endif; ?>
-            <?php if ( $footerMenu2 ) : ?>
-                <div class="col-6 col-md-3 col-xl-2">
-                    <?php if ( $footerMenuHeader2 ) : ?>
-                        <h4><?php echo $footerMenuHeader2 ?></h4>
-                    <?php endif; ?>
-                    <ul>
-                        <?php foreach ( $footerMenu2 as $key => $menuItem ) : ?>
-                            <li>
-                                <a href="<?php echo $menuItem->url ?>" target="<?php echo $menuItem->target ?>"><?php echo $menuItem->title ?></a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
-            <?php endif; ?>
-            <?php if ( $footerMenu3 ) : ?>
-                <div class="col-6 col-md-3 col-xl-2">
-                    <?php if ( $footerMenuHeader3 ) : ?>
-                        <h4><?php echo $footerMenuHeader3 ?></h4>
-                    <?php endif; ?>
-                    <ul>
-                        <?php foreach ( $footerMenu3 as $key => $menuItem ) : ?>
-                            <li>
-                                <a href="<?php echo $menuItem->url ?>" target="<?php echo $menuItem->target ?>"><?php echo $menuItem->title ?></a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
-            <?php endif; ?>
-            <?php if ( $footerBadges ) : ?>
-                <div class="col-6 col-md-3 col-xl-2 footer-badges">
-                    <?php foreach ( $footerBadges as $badge ) : ?>
-                        <div class="mb-3 text-center">
-                            <?php echo wp_get_attachment_image( $badge['badge']['ID'], 'medium' ) ?>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
-            <div class="col-12 col-xl-4">
+                <?php endif; ?>
+
+                <?php if ( $donateURL ) : ?>
+                    <a href="<?php echo $donateURL ?>" class="header-donate btn btn-primary">
+                        Find a Tech Navigator
+                    </a>
+                <?php endif; ?>
+
                 <?php if ( $newsletterFormEmbed ) : ?>
                     <div class="newsletter-form">
                         <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
                         <?php echo $newsletterFormEmbed ?>
                     </div>
                 <?php endif; ?>
+
                 <?php if ( $footerAddressContact ) { ?>
                     <h4><?php echo get_bloginfo( 'name' ); ?></h4>
                     <?php echo $footerAddressContact ?>
                 <?php } ?>
-            </div>
-        </div>
 
-        <div class="row footer-bottom">
-            <div class="logo col-auto">
-                <a href="<?php echo get_home_url() ?>" class="footer-logo">
-                    <?php echo apply_filters( 'heretic_footer_logo', wp_get_attachment_image( ($footerLogo ? $footerLogo['ID'] : $logo['ID']), 'full' ) ) ?>
-                </a>
-            </div>
-            <div class="copyright-column col-12 col-xl-auto">
+                <?php if ( $socialLinks ) : ?>
+                    <div class="social col-auto">
+                        <ul class="social-links">
+                            <?php foreach ( $socialLinks as $link ) : ?>
+                                <li>
+                                    <a href="<?php echo $link['url'] ?>" target="_blank">
+                                        <div class="icon"><?php echo $link['icon'] ?></div>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+
                 <p class="copyright">
                     © <?php echo date('Y') ?> <?php echo get_bloginfo( 'site_name' ) ?>, All Rights Reserved.
                     <?php if( $privacyPolicyURL ) { ?>
                         <a href="<?php echo $privacyPolicyURL ?>" class="privacy-policy">Privacy Policy</a>
                     <?php } ?>
                 </p>
+
             </div>
-            <?php if ( $socialLinks ) : ?>
-            <div class="social col-auto">
-                <ul class="social-links">
-                    <?php foreach ( $socialLinks as $link ) : ?>
-                        <li>
-                            <a href="<?php echo $link['url'] ?>" target="_blank">
-                                <div class="icon"><?php echo $link['icon'] ?></div>
-                            </a>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
-            <?php endif; ?>
         </div>
     </div>
 </div>

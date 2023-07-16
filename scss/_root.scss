@@ -1,7 +1,10 @@
 :root {
     --bs-body-color: #333333;
 
-    --bs-body-font-family: Calibri, Candara, Segoe, "Segoe UI", Helvetica, Arial, sans-serif;
+    --bs-body-font-family: 'Lato', Helvetica, Arial, sans-serif;
+    --bs-header-font-family: 'como', serif;
+
+    --bs-nav-link-color: red;
 
     --bs-primary: #F26647;
     --bs-primary-shade: #EF421B;
@@ -21,6 +24,8 @@
 
     // Custom variables
 
+    --color-grey: #F3F3F3;
+
     --borderRadius: 10px;
     --cardBoxShadow: 0 0 12px rgba(0,0,0,0.2);
 
@@ -34,8 +39,8 @@
 
     --rte-fifty-fifty-bg-color: #E6E8E8;
 
-    --hero-carousel-bg-light: #F3F9FA;
-    --hero-carousel-bg-dark: #0C1F22;
+    --hero-carousel-bg-light: var(--color-grey);
+    --hero-carousel-bg-dark: var(--bs-secondary);
 
     --newsletter-bg-color: var(--bs-secondary);
 }

@@ -6,37 +6,20 @@ Version:      1.0.0
 */
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-//@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
-//@import './scss/bootstrap-overrides';
+//@import 'bootstrap-overrides';
 
 // 3. Include remainder of required Bootstrap stylesheets
-//@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables";
 
 // 4. Include any default map overrides here
 
 // 5. Include remainder of required parts
-//@import "../node_modules/bootstrap/scss/maps";
-//@import "../node_modules/bootstrap/scss/mixins";
-//@import "../node_modules/bootstrap/scss/root";
-
-// 6. Include any optional Bootstrap components as you like
-//@import "../node_modules/bootstrap/scss/utilities";
-//@import "../node_modules/bootstrap/scss/reboot";
-//@import "../node_modules/bootstrap/scss/type";
-//@import "../node_modules/bootstrap/scss/images";
-//@import "../node_modules/bootstrap/scss/transitions";
-//@import "../node_modules/bootstrap/scss/containers";
-//@import "../node_modules/bootstrap/scss/grid";
-//@import "../node_modules/bootstrap/scss/accordion";
-//@import "../node_modules/bootstrap/scss/buttons";
-//@import "../node_modules/bootstrap/scss/card";
-//@import "../node_modules/bootstrap/scss/carousel";
-//@import "../node_modules/bootstrap/scss/forms";
-//@import "../node_modules/bootstrap/scss/helpers";
-//@import "../node_modules/bootstrap/scss/list-group";
-//@import "../node_modules/bootstrap/scss/offcanvas";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 //@import "../node_modules/bootstrap/scss/utilities/api";
@@ -47,16 +30,25 @@ Version:      1.0.0
 //@import '../node_modules/@glidejs/glide/src/assets/sass/glide.core';
 //@import '../node_modules/simplelightbox/src/simple-lightbox';
 
+@import 'fonts';
 @import 'root';
 
 // 9. Import Bootstrap component overrides
 @import 'bootstrap-components/button';
 @import 'bootstrap-components/card';
 
-@import 'fonts';
 @import 'global';
 @import 'gravity-forms';
 @import 'type';
 @import 'header';
 @import 'services';
 @import 'footer';
+@import 'login-form';
+
+// Modules
+@import '../layouts/rte/style';
+@import '../layouts/hero/style';
+@import '../layouts/accordion/style';
+
+// Templates
+@import 'resources';

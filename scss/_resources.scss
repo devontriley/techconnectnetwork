@@ -1,0 +1,29 @@
+.resources-page {
+    .resource-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .resource-card {
+        height: 100%;
+
+        img {
+            aspect-ratio: 1.5/1;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
