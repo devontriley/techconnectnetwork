@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php
+// Template Name: Resources
+get_header(); ?>
 
 <?php
 $user = wp_get_current_user();
@@ -22,12 +24,13 @@ $categories = get_terms([
             <?php endif; ?>
 
             <?php
-            if ( in_array( 'administrator', $userRoles ) || in_array( 'resource_access', $userRoles ) ) : ?>
+            if ( is_user_logged_in() ) : ?>
 
                 <h1>Resources</h1>
 
                 <div class="col-md-4">
                     <select class="resource-select form-select">
+                        <option selected disabled>Choose a category</option>
                         <?php foreach ( $categories as $cat ) : ?>
                             <option value="<?php echo $cat->slug; ?>"><?php echo $cat->name; ?></option>
                         <?php endforeach; ?>
@@ -48,6 +51,7 @@ $categories = get_terms([
                     <?php
                     $previousCategory = '';
 
+                    $counter = 0;
                     foreach ( $resourceQuery->posts as $resource ) :
                         $id = $resource->ID;
                         $title = $resource->post_title;
@@ -78,8 +82,13 @@ $categories = get_terms([
                             ] ); ?>
                         </div>
 
+                        <?php if ( $counter == $resourceQuery->found_posts - 1 ) : ?>
+                            </div><!-- .row -->
+                        <?php endif; ?>
+
                     <?php
                     $previousCategory = $categoryName;
+                    $counter++;
                     endforeach;
                     ?>
 

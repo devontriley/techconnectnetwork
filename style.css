@@ -1020,6 +1020,10 @@ a:hover {
   box-shadow: none;
 }
 
+.resources-page h1, .resources-page h2 {
+  font-family: var(--bs-header-font-family);
+  color: var(--header-color);
+}
 .resources-page .resource-nav {
   list-style: none;
   margin: 0;

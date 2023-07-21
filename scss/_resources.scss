@@ -1,4 +1,10 @@
 .resources-page {
+
+    h1, h2 {
+        font-family: var(--bs-header-font-family);
+        color: var(--header-color);
+    }
+
     .resource-nav {
         list-style: none;
         margin: 0;
