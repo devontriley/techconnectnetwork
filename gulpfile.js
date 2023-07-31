@@ -7,7 +7,7 @@ const browsersync = require("browser-sync").create();
 // BrowserSync
 function browserSync(done) {
     browsersync.init({
-        proxy: 'vinfen-gateway-multisite.local',
+        proxy: 'techconnectnetwork.vinfen-gateway-multisite.local',
         open: false,
         notify: false,
         ghostMode: false,
