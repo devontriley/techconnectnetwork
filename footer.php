@@ -37,16 +37,12 @@ $donateURL = get_field( 'donate_url', 'option' );
                     <ul class="footer-links">
                         <?php foreach ( $footerMenu1 as $key => $menuItem ) : ?>
                             <li>
-                                <a href="<?php echo $menuItem->url ?>" target="<?php echo $menuItem->target ?>"><?php echo $menuItem->title ?></a>
+                                <a href="<?php echo $menuItem->url ?>" target="<?php echo $menuItem->target ?>" class="btn btn-primary btn-sm">
+                                    <?php echo $menuItem->title ?>
+                                </a>
                             </li>
                         <?php endforeach; ?>
                     </ul>
-                <?php endif; ?>
-
-                <?php if ( $donateURL ) : ?>
-                    <a href="<?php echo $donateURL ?>" class="header-donate btn btn-primary">
-                        Find a Tech Navigator
-                    </a>
                 <?php endif; ?>
 
                 <?php if ( $newsletterFormEmbed ) : ?>

@@ -432,6 +432,32 @@ a:hover {
   margin-bottom: 30px;
   font-weight: 700;
 }
+@media (max-width: 575.98px) {
+  .primary-footer .footer-links li {
+    display: block;
+  }
+  .primary-footer .footer-links li:not(:last-child) {
+    margin-bottom: 15px !important;
+  }
+}
+.primary-footer .footer-links .btn, .primary-footer .footer-links body .gform_wrapper.gravity-theme .gform_footer button, body .gform_wrapper.gravity-theme .gform_footer .primary-footer .footer-links button,
+.primary-footer .footer-links body .gform_wrapper.gravity-theme .gform_footer input,
+body .gform_wrapper.gravity-theme .gform_footer .primary-footer .footer-links input,
+.primary-footer .footer-links body .gform_wrapper.gravity-theme .gform_page_footer button,
+body .gform_wrapper.gravity-theme .gform_page_footer .primary-footer .footer-links button,
+.primary-footer .footer-links body .gform_wrapper.gravity-theme .gform_page_footer input,
+body .gform_wrapper.gravity-theme .gform_page_footer .primary-footer .footer-links input, .primary-footer .footer-links .services-facets button.facetwp-reset, .services-facets .primary-footer .footer-links button.facetwp-reset {
+  color: #fff;
+}
+.primary-footer .footer-links .btn :hover, .primary-footer .footer-links body .gform_wrapper.gravity-theme .gform_footer button :hover, body .gform_wrapper.gravity-theme .gform_footer .primary-footer .footer-links button :hover,
+.primary-footer .footer-links body .gform_wrapper.gravity-theme .gform_footer input :hover,
+body .gform_wrapper.gravity-theme .gform_footer .primary-footer .footer-links input :hover,
+.primary-footer .footer-links body .gform_wrapper.gravity-theme .gform_page_footer button :hover,
+body .gform_wrapper.gravity-theme .gform_page_footer .primary-footer .footer-links button :hover,
+.primary-footer .footer-links body .gform_wrapper.gravity-theme .gform_page_footer input :hover,
+body .gform_wrapper.gravity-theme .gform_page_footer .primary-footer .footer-links input :hover, .primary-footer .footer-links .services-facets button.facetwp-reset :hover, .services-facets .primary-footer .footer-links button.facetwp-reset :hover {
+  color: #fff;
+}
 .primary-footer .social-links a {
   background: #fff;
 }
@@ -458,11 +484,11 @@ a:hover {
   display: inline-block;
   margin: 0 20px !important;
 }
-.primary-footer a:hover {
-  color: var(--bs-tertiary-1);
-}
 .primary-footer p {
   font-size: 1rem;
+}
+.primary-footer p.copyright {
+  font-size: 0.875rem;
 }
 
 .login-form-wrapper .error-message {

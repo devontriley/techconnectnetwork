@@ -16,6 +16,24 @@
     .footer-links {
         margin-bottom: 30px;
         font-weight: 700;
+
+        li {
+            @include media-breakpoint-down(sm) {
+                display: block;
+
+                &:not(:last-child) {
+                    margin-bottom: 15px !important;
+                }
+            }
+        }
+
+        .btn {
+            color: #fff;
+
+            :hover {
+                color: #fff;
+            }
+        }
     }
 
     .social-links {
@@ -55,13 +73,11 @@
         }
     }
 
-    a {
-        &:hover {
-            color: var(--bs-tertiary-1);
-        }
-    }
-
     p {
         @include font-size(16px);
+
+        &.copyright {
+            @include font-size(14px);
+        }
     }
 }
