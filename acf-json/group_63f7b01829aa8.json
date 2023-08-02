@@ -534,19 +534,13 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "acfe_save_meta": 0,
                             "clone": [
-                                "group_64147104ebae4"
+                                "group_64ca848cc553f"
                             ],
                             "display": "seamless",
                             "layout": "block",
                             "prefix_label": 0,
-                            "prefix_name": 0,
-                            "acfe_seamless_style": 0,
-                            "acfe_clone_modal": 0,
-                            "acfe_clone_modal_close": 0,
-                            "acfe_clone_modal_button": "",
-                            "acfe_clone_modal_size": "large"
+                            "prefix_name": 0
                         }
                     ],
                     "min": "",
@@ -822,5 +816,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1690887314
+    "modified": 1690993955
 }
