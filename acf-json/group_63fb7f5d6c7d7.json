@@ -16,13 +16,13 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "choices": {
                 "Large": "Large",
                 "Medium": "Medium",
                 "Small": "Small",
                 "Sidebar": "Sidebar",
-                "FiftyFifty": "FiftyFifty",
+                "FiftyFifty": "Fifty Fifty",
+                "TwoColumn": "Two Column",
                 "Full": "Full"
             },
             "default_value": "",
@@ -170,6 +170,34 @@
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_64c8f7ae395a7",
+            "label": "Body Copy Two",
+            "name": "body_copy_2",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fb7f5dd4101",
+                        "operator": "==",
+                        "value": "TwoColumn"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -358,6 +386,41 @@
             "height": ""
         },
         {
+            "key": "field_64cba25ec635f",
+            "label": "Image\/Video Description",
+            "name": "image_video_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fb7f5dd4101",
+                        "operator": "==",
+                        "value": "Medium"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_63fb7f5dd4101",
+                        "operator": "==",
+                        "value": "Small"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
             "key": "field_63fb80b8d4107",
             "label": "Image\/Video Alignment",
             "name": "image_video_alignment",
@@ -459,12 +522,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "acfe_display_title": "",
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1690465206
+    "modified": 1691067026
 }
