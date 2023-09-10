@@ -1046,6 +1046,15 @@ body .gform_wrapper.gravity-theme .gform_page_footer .primary-footer .footer-lin
   box-shadow: none;
 }
 
+.layout-grid .header h1,
+.layout-grid .header .h1,
+.layout-grid .header h2,
+.layout-grid .header .h2,
+.layout-grid .header h3,
+.layout-grid .header .h3 {
+  margin-bottom: 0.625em;
+}
+
 .resources-page h1, .resources-page h2 {
   font-family: var(--bs-header-font-family);
   color: var(--header-color);
