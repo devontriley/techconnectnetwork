@@ -1081,3 +1081,19 @@ body .gform_wrapper.gravity-theme .gform_page_footer .primary-footer .footer-lin
   width: 100%;
   object-fit: cover;
 }
+.resources-page .resource-card .card-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.resources-page .resource-card .card-body .card-title {
+  flex: 0 0 100%;
+}
+.resources-page .resource-card .card-body .btn, .resources-page .resource-card .card-body body .gform_wrapper.gravity-theme .gform_footer button, body .gform_wrapper.gravity-theme .gform_footer .resources-page .resource-card .card-body button,
+.resources-page .resource-card .card-body body .gform_wrapper.gravity-theme .gform_footer input,
+body .gform_wrapper.gravity-theme .gform_footer .resources-page .resource-card .card-body input,
+.resources-page .resource-card .card-body body .gform_wrapper.gravity-theme .gform_page_footer button,
+body .gform_wrapper.gravity-theme .gform_page_footer .resources-page .resource-card .card-body button,
+.resources-page .resource-card .card-body body .gform_wrapper.gravity-theme .gform_page_footer input,
+body .gform_wrapper.gravity-theme .gform_page_footer .resources-page .resource-card .card-body input, .resources-page .resource-card .card-body .services-facets button.facetwp-reset, .services-facets .resources-page .resource-card .card-body button.facetwp-reset {
+  align-self: flex-end;
+}
