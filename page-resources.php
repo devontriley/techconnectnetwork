@@ -41,8 +41,7 @@ $categories = get_terms([
                 $resourceQuery = new WP_Query([
                     'post_type' => 'resources',
                     'posts_per_page' => -1,
-                    'orderby' => 'meta_value',
-                    'order' => 'DESC',
+                    'orderby' => array( 'meta_value' => 'DESC', 'menu_order' => 'ASC' ),
                     'meta_key' => 'resource_category'
                 ]);
 
