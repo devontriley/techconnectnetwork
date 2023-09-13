@@ -3,6 +3,7 @@
 get_header(); ?>
 
 <?php
+$bodyCopy = get_field( 'body_copy' );
 $user = wp_get_current_user();
 $userRoles = $user->roles;
 $categories = get_terms([
@@ -27,6 +28,14 @@ $categories = get_terms([
             if ( is_user_logged_in() ) : ?>
 
                 <h1>Resources</h1>
+
+                <?php if ( $bodyCopy ) : ?>
+                    <div class="row">
+                        <div class="col col-lg-8">
+                            <?php echo $bodyCopy; ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
 
                 <div class="col-md-4">
                     <select class="resource-select form-select">
